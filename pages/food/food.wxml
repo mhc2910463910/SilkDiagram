@@ -1,0 +1,34 @@
+<!--pages/food/food.wxml-->
+<!-- <text>pages/food/food.wxml</text> -->
+<view style="background-color: #e6e6e6;height: 100vh;overflow: hidden;">
+  <view class="food">
+    <navigator url="">
+      <image src="/static/img/store/mark.png" mode="heightFix"/>
+      <view class="card-info">
+        <text>标题</text>
+        <view class="flex-row" style="justify-content: flex-start;">
+          <text style="margin-right: 16rpx;">评分</text>
+          <text style="flex: 1;">销量</text>
+          <text style="margin-right: 16rpx;">30分</text>
+          <text>788m</text>
+        </view>
+        <view class="flex-row">
+          <text>起送15</text><text style="color: #e67f2e;margin-left: 24rpx;">免配送费</text>
+        </view>
+        <view class="flex-row">
+          <image src="/static/img/universal/praise.png" mode="heightFix" style="height: 1em;margin-top: 15rpx;"/>
+          <view style="background-color: #f7d7b6;padding: 8rpx;border-radius: 0 12rpx 12rpx 0;">商家回复快</view>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="">
+        
+    </navigator>
+    <navigator url="">
+      
+    </navigator>
+    <navigator url="">
+      
+    </navigator>
+  </view>
+</view>

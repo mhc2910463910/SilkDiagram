@@ -1,0 +1,7 @@
+<!--pages/throttle/throttle.wxml-->
+<view style="background-color: #e6e6e6;height: 100vh;padding: 10rpx 24rpx;">
+  <navigator class="card flex-row" wx:for="{{articleList}}" wx:key="index" url="/pages/web-view/web-view?src={{item.url}}">
+    <image src="{{item.avatar}}" mode="heightFix" style="height: 100%;margin-right: 36rpx;"/>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>

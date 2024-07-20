@@ -1,0 +1,41 @@
+<!--component/mt-weapp/mt-dropdown-item/mt-dropdown-item.wxml-->
+<view class="mt-dropdown-item" bindtap="onTapItem">
+  <view class="tab_view_label" style="color: {{selectState || local_index >= 0 ? selectColor : ''}};">{{initVal ? options[local_index].label : title}}</view>
+  <view class=" {{showModal? 'tab_top_Trianglebox' : 'tab_bottom_Trianglebox'}}"></view>
+</view>
+
+<view class="mt-dropdown-modal"  style="height: {{showModal? '100%' :'0'}}; top: {{top}}px;">
+<!-- <view class="mt-dropdown-modal"> -->
+  <view class="modal_view" style="height: {{showModal ? '100%' : '0'}};" bindtap="onTapModal"></view>
+
+  <view class="drop-container" style="height: {{showModal? auto :'0'}};">
+    <view wx:if="{{showModal && options.length > 0}}" class="drop_item_container drop_opts_container" >
+
+      <view wx:if="{{type === 'one'}}" style="overflow: auto;">
+        <view wx:for="{{options}}" wx:key="value" class="drop_item" data-index="{{index}}" bindtap="onSelectItem">
+          <view class="label" style="color: {{index == local_index ? '#0191FF' : '#000'}}">{{item.label}}</view>  
+          <image wx:if="{{index == local_index}}" class="icon" src="/index/Group@3x.png"></image>
+        </view>
+      </view>
+
+      <view hidden="{{type !== 'multi'}}" class="multi_box" >
+        <view class="multi_options_box">
+          <view wx:for="{{local_options}}" wx:key="value" class="drop_item" data-index="{{index}}" bindtap="onCheckItem">
+            <view class="label" style="color: {{item.checked ? '#0191FF' : '#000'}}">{{item.label}}</view>  
+            <checkbox class="checkbox" value="{{item.checked}}" checked="{{item.checked}}" color="#198CFF"></checkbox>
+          </view>
+        </view>
+        <view class='modal-btn-wrapper'>
+					<view class='cancel-btn' style='color:rgba(7,17,27,0.6)' bindtap='checkReset'>重置</view>
+					<view class='confirm-btn' style="color:#0191FF" bindtap='checkConfirm'>确定</view>
+				</view>
+      </view>
+
+    </view>
+    <view wx:elif="{{showModal}}" class="drop_item_container" >
+      <slot name="{{id}}"></slot>
+    </view>
+  </view>
+</view>
+
+

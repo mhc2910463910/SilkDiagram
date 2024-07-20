@@ -1,0 +1,49 @@
+/**app.wxss**/
+/* 引入iconfont */
+@import "./static/styles/iconfont.wxss";
+.container{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.center-all{
+  align-items: center;
+  justify-content: center;
+}
+.center-main{
+  justify-content: center;
+  /* align-items: center; */
+}
+.center-acce{
+  align-items: center;
+}
+
+.grid-4-cols{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.clearfix{
+  clear: both;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.button{
+  height: 500rpx;
+}

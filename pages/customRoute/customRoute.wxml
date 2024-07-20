@@ -1,0 +1,9 @@
+<!--pages/customRoute/customRoute.wxml-->
+
+<scroll-view scroll-y="{{true}}" style="width:100%;height:{{sysheight}}px;">
+     <view class="img-size">
+         <image src="{{domain}}/static/upload/{{customRoute.img}}" mode="widthFix" class="liucheng-img"></image>
+     </view>
+</scroll-view>
+<!-- <button type="primary" bindtap="gotoRoute" style="background-image:url('https://648xq42149.zicp.fun/SilkDiagram/upload/btn1.jpg');" plain='true'>确认此攻略</button> -->
+<button class="weui-btn" bindtap="gotoRoute" plain='true' style="width: 100%;height: 200px;;"> <image src='{{domain}}/static/upload/btn2.jpg' mode='heightFix' ></image></button>

@@ -1,0 +1,15 @@
+<!--components/loading.wxml-->
+<!--  style="display: {{show?'block':'none'}}; -->
+
+<view class="message flex-col" style="display: {{show == true ?'flex':'none'}};">
+  <view class="loader-dots" style="display: {{show == true ?'block':'none'}};">
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+  <text>
+    {{message}}
+  </text>
+</view>

@@ -1,0 +1,18 @@
+<!--miniprogram/pages/dropdowm-demo/demo.wxml-->
+
+<view style="margin-top: 100rpx;">
+	<mt-dropdown>
+		<mt-dropdown-item title="旅游类型" options="{{options1}}" bind:select="changeOptions1" name="routeType" ></mt-dropdown-item>
+		<mt-dropdown-item type="multi" title="地区" options="{{options2}}" bind:select="changeOptions2" name="position"></mt-dropdown-item>
+		<mt-dropdown-item id="item" title="团体" options="{{options3}}" bind:select="changeOptions3">
+			<!-- <view class="slot_1_container">
+				<view class='modal-btn-wrapper'>
+					<view class='cancel-btn' style='color:rgba(7,17,27,0.6)' bindtap='cancel'>重置</view>
+					<view class='confirm-btn' style="color:#0191FF" bindtap='confirm'>确定</view>
+				</view>
+			</view> -->
+		</mt-dropdown-item>
+	</mt-dropdown>
+</view>
+<!-- <button class="weui-btn" type="primary" form-type="submit">保存</button> -->
+<button id="submit" type="primary" bindtap="submitForm">生成您的专属旅游规划</button>

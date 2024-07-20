@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mt-dropdown": "/components/mt-dropdown/mt-dropdown",
+    "mt-dropdown-item": "/components/mt-dropdown-item/mt-dropdown-item"
+  },
+  "navigationBarTitleText": "定制旅游服务平台"
+}

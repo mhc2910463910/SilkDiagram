@@ -1,0 +1,96 @@
+<view class="box" style="background-color: #f2f2f2;">
+<view style="margin-top: {{capsule.top}}px;"></view>
+<!-- show="{{show}}" -->
+<loading show="{{show}}"></loading>
+<view class="capsule-area">
+  <button bind:tap="showSelector" style="margin: 0 0 auto 16rpx;width: 200rpx;height: {{capsule.bottom-capsule.top}}px;border-radius: 50rpx;">
+  兰州
+  </button>
+</view>
+<selector-component
+  show="{{selectorVisible}}"
+  key="{{key}}"
+  referer="漫游丝绸古道"
+  bindselect="onSelectCity"
+></selector-component>
+<!-- 圆角轮播图 -->
+<view style="margin: 24rpx 16rpx;border-radius: 30rpx;overflow: hidden;">
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" circular="true" style="border-radius: 40rpx;">
+  <block>
+    <navigator open-type="switchTab" url="/pages/store/store">
+      <swiper-item wx:for="{{swiperImage}}"  wx:key="index" wx:if="{{item!=null}}">
+        <view > <image src="{{domain}}/static/upload/{{item}}" mode="aspectFill" ></image></view>
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+</view>
+
+<view class="grid-list" style="display: grid;grid-template-columns: 25% 25% 25% 25%;">
+<!-- todo,四个模块，grid布局 -->
+    <view>
+    <navigator  class="grid-item" url="/pages/custom-mode2/custom-mode2">
+        <!-- <image src="{{item.icon}}"></image> -->
+        <image src="{{domain}}/static/upload/步览四方.png" alt="" style="width:100rpx;height:100rpx;"/>
+        <h2>步览四方</h2>
+    </navigator>
+    </view>
+    <!-- 分割线 -->
+    <!-- <view style="height: 180rpx;width: 2rpx;background-color: #e9e0e3;position: relative;top: 35rpx;"></view> -->
+    <view>
+    <navigator class="grid-item"  url="/pages/custom-mode/custom-mode">
+        <!-- <image src="{{item.icon}}"></image> -->
+        <image src="{{domain}}/static/upload/云迹悠然.png" alt="" style="width:100rpx;height:100rpx;"/>
+        <!-- <text>线上模式</text> -->
+        <h2>云迹悠然</h2>
+    </navigator>
+  </view>
+  <navigator  class="grid-item" url="/pages/custom-mode2/custom-mode2">
+        <!-- <image src="{{item.icon}}"></image> -->
+        <image src="{{domain}}/static/upload/节流秘籍.png" alt="" style="width:100rpx;height:100rpx;"/>
+        <h2>节流秘籍</h2>
+    </navigator>
+    <navigator  class="grid-item main" hover-class="none" url="/pages/food-selector/food-selector">
+        <!-- <image src="{{item.icon}}"></image> -->
+        <image src="{{domain}}/static/upload/自助饭饱.png" alt="" style="width:100rpx;height:100rpx;"/>
+        <h2>自助饭饱</h2>
+    </navigator>
+</view>
+<!-- 公众号 -->
+<view class="flex-row center-acce" style="padding: 30rpx 8rpx 30rpx 24rpx;background-color: white;">
+  <image src="{{domain}}/static/logo/logo_1.jpg" mode="aspectFill" style="width: 150rpx;height: 150rpx;border-radius: 50%;"/>
+  <view class="flex-col center-vert" style="margin-left: 50rpx;align-items: flex-start;height: 70px;">
+    <text style="font-size: 1em;float:left;">SeDa</text>
+    <text style="font-size: 0.7em;">旅行，拉近你与世界的距离</text>
+  </view>
+  <text style="margin: auto 0 auto auto;">>></text>
+</view>
+<!-- 只此丝路卡片列表 -->
+<!-- <image src="/static/img/home/logo.png" style="margin-left: 20rpx;height: 100rpx;width: 300rpx;"/> -->
+<!-- 卡片实现示例（后面改成组件或者循环） -->
+<navigator class="flex-col" wx:for="{{routeList}}" wx:key="index" url="/pages/routecart/routecart?id={{item.routeId}}" style="background-color: white;margin: 36rpx 16rpx;border-radius: 30rpx;overflow: hidden;">
+  <image mode="aspectFill" src="{{domain}}/static/upload/{{item.routeImg[0]}}"   />
+  <!-- 左右布局 -->
+  <!-- 左边的文字 -->
+  <view class="content">
+    <text class="text" >{{item.routeName}}</text>
+    <text class="price" style="margin: auto auto 10rpx 10rpx;">¥{{item.routePrice}}</text>
+    <!-- 右边的按钮 -->
+    <!-- <button style="width: 200rpx;margin: auto 5rpx 10rpx auto;background-color: #f28944;border-radius: 50rpx;">购买</button> -->
+  </view>
+
+</navigator>
+
+<!-- <navigator class="mod-item" wx:for="{{routeList}}" wx:key="id" url="/pages/routecart/routecart?id={{item.routeId}}">
+      <view class="mod-img">
+        <image src="{{domain}}/static/upload/{{item.routeImg[0]}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>{{item.routeName}} <text class="mod-info">￥{{item.routePrice}}</text></text> 
+      </view>
+     
+</navigator> -->
+
+<!-- <loading show=true></loading> -->
+</view>
+

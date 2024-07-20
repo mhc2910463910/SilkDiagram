@@ -1,0 +1,100 @@
+<!--pages/commodity/commodity.wxml-->
+<!-- <text>pages/commodity/commodity.wxml</text> -->
+<!-- <swiper indicator-dots="true" circular="true" >
+    <swiper-item wx:for="{{imageList}}" wx:key="id" class="img" >
+        <image  src="https://648xq42149.zicp.fun/SilkDiagram_war_exploded/upload/{{item}}" ></image>
+    </swiper-item>
+</swiper>
+<rich-text nodes="<h1 style='color:black;' >{{commodity.name}}</h1>">
+</rich-text>
+<view>
+    {{commodity.type}}
+</view>
+<view>{{commodity.price}}</view>
+<view>{{commodity.price*1000}}</view>
+<button type="primary" class="btn">加入购物车</button> -->
+<!--商品幻灯片-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner" duration="{{duration}}" circular="{{duration}}">
+  <block wx:for="{{imageList}}" wx:key="index" wx:if="{{item!=null}}">
+    <swiper-item>
+      <image  src="{{domain}}/static/upload/{{item}}" class="slide-image" mode="aspectFill" data-src='{{domain}}/static/upload/{{item}}' bindtap="previewImage"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品幻灯片 end-->
+<view class="info-price clear" >
+  <view class='price'>￥{{commodity.price}} </view>
+</view>
+<view class="info-title">
+    <text>名称:{{commodity.name}}</text>
+</view>
+<view class="info-title">
+    <text>主题:{{commodity.type}}</text>
+</view>
+ 
+<view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
+    <view class="clearfix flex grey gridXt">
+      <!-- <text class="sub"><block wx:if='{{goods_info.goods_yunfei==0.00}}'>运费：包邮</block><block wx:else>运费：{{goods_info.goods_yunfei}}</block></text> -->
+      <text class="sub"><block >运费：包邮</block></text>
+      <!-- <text class="sub">库存：{{goods_info.goods_kucun}}</text> -->
+      <!-- <text class="sub">销量：{{goods_info.goods_xiaoliang}}</text> -->
+    </view>
+</view>
+<view class="info-title">
+    <text>商品详情:</text>
+</view>
+
+  <!--评价-->
+<!-- <block wx:if="{{pjDataList!=''}}">
+
+  <view class='pj_box'>
+    <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+     <view style='float:left;'>商品评价</view>
+     <view style='float:right;margin-left:2px;margin-top:-1px;'>
+        <image src="/img/ico_jt.png" class="ico_img_jt"></image>
+     </view>
+     <view style='float:right;font-size:12px;color:#A2A2A2;'>
+        <navigator url="pjList?id={{goods_id}}">查看全部</navigator>
+     </view>
+     <view class='clear'></view>
+    </view>
+    <block wx:for="{{pjDataList}}" wx:for-item="item" wx:key="pj">
+      <view class="list_item">
+        <view class='pj_u_info clear'>
+          <view class='header_img'><image src="{{item.headpic}}" mode="aspectFit"></image></view>
+          <view class='name'>{{item.author}}</view>
+          <view class='time'>{{item.add_time}}</view>
+        </view>
+        <view class='pj_cont'>
+          {{item.content}}
+        </view>
+      </view>
+    </block>
+</view>
+</block> -->
+ 
+<!--底部浮动 start-->
+<view wx:if="{{(commodity.price*3000)<=sumStep}}">
+  <view class="foot-nav mt15">
+    <view class="flex con gridXt tc">
+      <view class="add-cart sub f16">
+        <button class="add-cart-btn" bindtap='gotoCart' >去购物车结算</button>
+      </view>
+      <view class="add-cart sub f16">
+        <button class="add-cart-btn" bindtap='addCart' data-id="{{commodity.id}}">加入购物车</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view class="foot-nav mt15">
+    <view class="flex con gridXt tc">
+      <view class="add-cart sub f16">
+        <button class="add-cart-btn" bindtap='gotoCart' >我的步数{{sumStep}}</button>
+      </view>
+      <view class="add-cart sub f16">
+        <button class="add-cart-btn" disabled="true">{{commodity.price*3000}}未解锁</button>
+      </view>
+    </view>
+  </view>
+</view>

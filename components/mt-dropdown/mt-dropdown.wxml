@@ -1,0 +1,4 @@
+<!--component/mt-weapp/mt-dropdown/mt-dropdown.wxml-->
+<view class="mt_dropdown" id="mt_dropdown">
+  <slot></slot>
+</view>

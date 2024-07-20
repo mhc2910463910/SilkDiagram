@@ -1,0 +1,22 @@
+<!--pages/myinfo/myinfo.wxml-->
+<form bindsubmit="formSubmit">
+  <!-- 头像 -->
+  <view class="head-box">
+    <button open-type="chooseAvatar" class="avatar-wrapper" style="width: 150rpx;" bind:chooseavatar="chooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+  </view>
+<i-panel class="cell-panel-demo">
+    <i-cell>
+        <input type="nickname" name="user_name" class="weui-input" placeholder="{{user_name}}" />
+    </i-cell>
+</i-panel>
+<i-panel class="cell-panel-demo">
+    <i-cell title="我的成就" is-link url="/pages/index/index"></i-cell>
+</i-panel>
+<i-panel class="cell-panel-demo">
+    <i-cell title="我的地址" is-link url="/pages/addresslist/addresslist"></i-cell>
+</i-panel>
+<!-- <button formType="submit" size="small" style="background-color: aquamarine;">确认修改</button> -->
+</form>
+

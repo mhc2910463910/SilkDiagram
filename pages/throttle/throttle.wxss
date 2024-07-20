@@ -1,0 +1,22 @@
+/* pages/throttle/throttle.wxss */
+
+.card{
+  height: 270rpx;
+  border-radius: 30rpx;
+  background-color: #f6f6f6;
+  box-shadow: 4rpx 4rpx 15rpx 2rpx black;
+  margin-bottom: 16rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.card > text{
+  display: -webkit-box;
+  flex: 1;
+  align-self: center;
+  height: 200rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+}

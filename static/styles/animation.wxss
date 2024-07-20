@@ -1,0 +1,50 @@
+.circle-line{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+.circle-line text{
+  display: block;
+  width: 50%;
+  height: 5px;
+  opacity: .7;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: 0px;
+  transform-origin: center right; 
+}
+.circle-line text::before{
+  content: '';
+  display: block;
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: blue;
+}
+.circle-line text:nth-child(1){
+  transform: rotate(0deg);
+}
+.circle-line text:nth-child(2){
+  transform: rotate(45deg);
+}
+.circle-line text:nth-child(3){
+  transform: rotate(90deg);
+}
+.circle-line text:nth-child(4){
+  transform: rotate(135deg);
+}
+.circle-line text:nth-child(5){
+  transform: rotate(180deg);
+}
+.circle-line text:nth-child(6){
+  transform: rotate(225deg);
+}
+.circle-line text:nth-child(7){
+  transform: rotate(270deg);
+}
+.circle-line text:nth-child(8){
+  transform: rotate(315deg);
+}

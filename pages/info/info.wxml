@@ -1,0 +1,87 @@
+<!--pages/info/info.wxml-->
+<view class="top-bg"></view>
+<view class="box">
+  <!-- 头像 -->
+  <view class="head-box">
+    <image class="head-img" src="{{avatarUrl}}" mode="widthFix"></image>
+  </view>
+
+  <view class="order">
+    <view style="margin-bottom: 48rpx;">
+      <text style="float: left;margin: 10rpx 10rpx;font-size: 1.2;font-weight: 600;">我的订单</text>
+      <view class="flex-row" style="float: right;margin: 10rpx 10rpx;">
+        <text>全部订单</text>
+        <image src="/static/img/universal/arrow.png" style="width: 30rpx;height: 30rpx;margin: auto 0;"/>
+      </view>
+      
+      
+      <view class="clearfix"></view>
+    </view>
+    <view class="grid-4-cols">
+      <view class="flex-col center-all">
+        <image src="/static/img/tabBar/openhome.jpg" mode="aspectFit" style="width: 100rpx;height: 100rpx;" />
+        <text>全部</text>
+      </view>
+      <view class="flex-col center-all">
+        <image src="/static/img/tabBar/openhome.jpg" mode="aspectFit" style="width: 100rpx;height: 100rpx;" />
+        <text>待付款</text>
+      </view>
+      <view class="flex-col center-all">
+        <image src="/static/img/tabBar/openhome.jpg" mode="aspectFit" style="width: 100rpx;height: 100rpx;" />
+        <text>待使用</text>
+      </view>
+      <view class="flex-col center-all">
+        <image src="/static/img/tabBar/openhome.jpg" mode="aspectFit" style="width: 100rpx;height: 100rpx;" />
+        <text>已完成</text>
+      </view>
+    </view>
+  </view>
+  <!-- 四个选项卡片 -->
+  <view class="flex-col card" style="margin: 16rpx 0;padding: 0 24rpx;border-radius: 30rpx;border: #fcb69f 1rpx solid;">
+    <button class="row" style="width: 100%;" bindtap="gotoInfo">
+      <view class="left">
+        <!-- <icon class="icon-small" type="success" size="16"></icon> -->
+        <view class="iconfont icon-a-draftcaogaowendang"></view>
+        <text class="text">基本信息</text>
+      </view>
+      <image src="/static/img/universal/arrow.png" style="width: 30rpx;height: 30rpx;margin-left: 60rpx;"/>
+      <!-- <view class="right">></view> -->
+    </button>
+    <!-- 第二部分列表 -->
+    <button open-type="share" class="row" style="width: 100%;">
+      <view class="left">
+        <icon class="iconfont icon-a-Deliverydisongfasongzhifeiji" />
+        <text class="text">分享好友</text>
+      </view>
+      <image src="/static/img/universal/arrow.png" style="width: 30rpx;height: 30rpx;margin-left: 60rpx;"/>
+    </button>
+    <button open-type="contact" class="row" style="width: 100%;border-bottom: none;">
+      <view class="left">
+        <!-- <icon class="icon-small" type="success" size="16"></icon> -->
+        <!-- <view class="iconfont icon-dianhua"></view> -->
+        <icon class="iconfont icon-dianhua"></icon>
+        <text class="text">在线客服</text>
+      </view>
+      <image src="/static/img/universal/arrow.png" style="width: 30rpx;height: 30rpx;margin-left: 60rpx;"/>
+    </button>
+    <navigator class="row" url="/pages/login/login" style="width: 100%;box-sizing: border-box;" wx:if="{{show}}">
+      <view class="left">
+        <!-- <icon class="icon-small" type="success" size="16"></icon> -->
+        <icon class="iconfont icon-denglu" />
+        <text class="text">微信登录</text>
+      </view>
+    </navigator>
+    <!-- 退出登陆 -->
+    <button class="row" bindtap="logout" style="width: 100%;" wx:if="{{!show}}">
+      <view class="left">
+        <!-- <icon class="icon-small" type="success" size="16"></icon> -->
+        <icon class="iconfont icon-tuichudenglu" />
+        <text class="text">退出登录</text>
+      </view>
+    </button>
+  </view>
+  <!-- 卡片列表结束 -->
+  <view class="footer">
+    <text>©微信小程序个人中心</text>
+  </view>
+</view>

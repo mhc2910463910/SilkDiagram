@@ -1,0 +1,5 @@
+/* components/base-button/base-button.wxss */
+.my-class{
+  height: 300rpx;
+  width: 50rpx;
+}

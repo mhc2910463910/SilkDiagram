@@ -1,0 +1,5 @@
+<!--pages/lanzhou/lanzhou.wxml-->
+<view class="flex-col" style="height: 100vh;">
+  <image src="{{url}}" mode="heightFix" style="height: 100%;width: 100%;"/>
+<!-- box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.7); -->
+</view>

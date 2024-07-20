@@ -1,0 +1,30 @@
+/* component/mt-weapp/mt-dropdown/mt-dropdown.wxss */
+.mt_dropdown {
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  height: 76rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.mt_dropdown_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* 遮罩层 */
+.modal_view {
+  z-index: 1997;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: height 0.3s;
+  animation-duration: 0.2s;
+}
+

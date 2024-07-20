@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "文创商城",
+  "navigationBarBackgroundColor": "#f2f2f2"
+  
+}

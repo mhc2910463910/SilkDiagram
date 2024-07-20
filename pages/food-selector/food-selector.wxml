@@ -1,0 +1,9 @@
+<!--pages/food-selector/food-selector.wxml-->
+
+<view class="page">
+  <view class="area">
+    <navigator wx:for="{{areaList}}" url="/pages/food-area/food-area?name={{item}}" wx:key="index">
+      {{item}}
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/food-selector/food-selector.wxss */
+.page{
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  background: radial-gradient(#528ca5,#8672b2);
+}
+.area{
+  box-shadow: 0 0 50vmax rgba(0,0, 0, 0.5);
+  align-self: center;
+  padding: 10%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.area > navigator{
+  /* color: #F8C471; */
+  font-weight: 600;
+  text-align: center;
+  border: 1rpx solid rgba(0,0,0,0.7);
+  background-color: #faf5e2;
+  border-radius: 24rpx;
+  margin: 0 12rpx;
+  padding: 24rpx 48rpx;
+}

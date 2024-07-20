@@ -1,0 +1,17 @@
+<view class="flex-col">
+<scroll-view class="scroll" scroll-y="true">
+<view wx:for="{{addressList}}">
+    <i-panel class="cell-panel-demo" >
+        <i-cell title="{{item.name}} {{item.phone}}" label="{{item.address}}" >
+            <p style="float: right;" class="ui-list-item-del" data-id="{{item.id}}" bindtap="delAddress">删除</p>
+        </i-cell>
+    </i-panel>
+</view>
+</scroll-view>
+
+
+<button type="primary" bind:tap="addAddress" 
+  style="margin: 0;width: 80%;position: fixed;bottom: 24rpx;"
+>新增地址</button>
+
+</view>

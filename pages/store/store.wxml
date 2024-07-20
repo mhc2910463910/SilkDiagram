@@ -1,0 +1,36 @@
+<view class="page">
+  <!-- 左边栏 -->
+  <view class="navigation">
+    <scroll-view scroll-y="true" style="height:100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <!-- <view class="flex-col"> -->
+      <!-- <view wx:for="{{tabitem}}" wx:key="index" class="item-text {{tabIndex===index?'activity':''}}" bindtap="setTab" data-index="{{index}}">
+          <image class="img" src="/static/img/store/mark.png" alt=""/>
+        {{item.title}}
+        </view> -->
+      <view wx:for="{{commodityTypeList}}" wx:key="index" class="item-text flex-col center-acce {{tabIndex===index?'activity':''}}" bindtap="setTab" data-index="{{index}}">
+        <image class="img" src="{{domain}}/static/upload/{{item.icon}}" alt="" style="width: 45rpx;height: 45rpx;" />
+        <text>{{item.name}}</text>
+      </view>
+      <!-- </view> -->
+      <!-- <view style="width:100%;height:300rpx;"></view> -->
+    </scroll-view>
+  </view>
+  <!-- 左边栏 end-->
+
+  <!-- 右边内容 -->
+  <view class="content">
+    <scroll-view scroll-y="true" style="height:100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <!-- 商品 -->
+      <view class="commodity-list">
+        <view class="commodity-item" wx:for="{{commodityList}}" wx:key="id" style="border: 1rpx;border-radius: 15rpx;margin: 7.5rpx;background-color: #eeeeee;">
+          <image src="{{domain}}/static/upload/{{item.img1}}" bindtap="gotoCommodity" data-id="{{item.id}}"></image>
+          <text bindtap="gotoCommodity" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </view>
+      <!-- 商品 end-->
+      <view style="width:100%;height:200rpx;"></view>
+    </scroll-view>
+  </view>
+  <!-- 右边内容 end-->
+
+</view>

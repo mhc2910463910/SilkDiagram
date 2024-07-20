@@ -1,0 +1,4 @@
+<!--components/base-button/base-button.wxml-->
+<button class="my-class" style="margin: 0;width: 100%;height: 100%;" bind:tap="bindtap">
+  <slot></slot>
+</button>
