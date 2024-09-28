@@ -5,6 +5,8 @@
 - [ ] 购物车
 - [x] 登录注册 
 - [ ] 更多，待开发……
+# 演示
+http://nas.lzmhc.xyz:9000/?p=206
 # 截图
 ![1727505092619](https://github.com/user-attachments/assets/41227ae1-4ace-4f2c-a181-98f8844e8916)
 ![1727505092627](https://github.com/user-attachments/assets/1240ed2f-20c9-4dc4-a2ed-26d3d4c5c598)
